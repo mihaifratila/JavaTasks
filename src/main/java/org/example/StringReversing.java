@@ -1,2 +1,5 @@
-package org.example;public class StringReversing {
+package org.example;
+
+public class StringReversing {
+
 }
