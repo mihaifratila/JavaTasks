@@ -10,7 +10,7 @@ public class StringReversing {
     }
 
     public static String stringReverse2(String s) {
-        char temp =' ';
+        char temp;
         char[] stringToCharArray = s.toCharArray();
         for (int i = 0, j = stringToCharArray.length - 1; i < j; i++, j--) {
             temp = stringToCharArray[j];
@@ -20,8 +20,16 @@ public class StringReversing {
         return new String(stringToCharArray);
     }
 
+    public static String stringReverse3(String s) {
+        StringBuilder reverseStringBuilder = new StringBuilder();
+        for(int i = s.length() - 1; i >= 0; i--) {
+            reverseStringBuilder.append(s.charAt(i));
+        }
+        return reverseStringBuilder.toString();
+    }
+
     public static void main(String[] args) {
         String stringToRevers = "I'm going to go to school today morning.";
-        System.out.println(stringReverse2(stringToRevers));
+        System.out.println(stringReverse3(stringToRevers));
     }
 }
