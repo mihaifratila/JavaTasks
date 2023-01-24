@@ -1,7 +1,7 @@
 package org.example;
 
 
-public class Main {
+public class Task1 {
 
     static boolean checkArrayIsSorted(int size, int[] arr) {
         for(int i = 0; i < size; i++) {

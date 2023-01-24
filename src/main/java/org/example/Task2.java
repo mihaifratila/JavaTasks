@@ -1,6 +1,6 @@
 package org.example;
 
-public class StringReversing {
+public class Task2 {
     public static String stringReverse1(String s) {
         String reversedString ="";
         for (int i = s.length() - 1; i >=0; i--) {

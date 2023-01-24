@@ -30,7 +30,7 @@ class MakingChanges {
         p2.setAge(tempAge);
     }
 }
-public class ChangeIdentities {
+public class Task3 {
     public static void main(String[] args) {
         Person p1 = new Person("Mark", 31);
         Person p2 = new Person("Andrew", 22);
