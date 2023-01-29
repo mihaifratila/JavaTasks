@@ -1,5 +1,10 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+
 public class Task1 {
     public static void main(String[] args) {
 
@@ -25,16 +30,16 @@ public class Task1 {
                 "Yellow submarine, yellow submarine\n" +
                 "Full steam ahead, Mister Boatswain, full steam ahead\n" +
                 "Full steam ahead it is, Sergeant\n" +
-                "(Cut the cable, drop the cable)\n" +
+                "Cut the cable, drop the cable\n" +
                 "Aye-aye, sir, aye-aye\n" +
                 "Captain, captain\n" +
-                "As we live a life of ease (a life of ease)\n" +
-                "Every one of us (every one of us)\n" +
-                "Has all we need (has all we need)\n" +
-                "Sky of blue (sky of blue)\n" +
-                "And sea of green (sea of green)\n" +
-                "In our yellow (in our yellow)\n" +
-                "Submarine (submarine, aha)\n" +
+                "As we live a life of ease a life of ease\n" +
+                "Every one of us every one of us\n" +
+                "Has all we need has all we need\n" +
+                "Sky of blue sky of blue\n" +
+                "And sea of green sea of green\n" +
+                "In our yellow in our yellow\n" +
+                "Submarine submarine, aha\n" +
                 "We all live in a yellow submarine\n" +
                 "A yellow submarine, yellow submarine\n" +
                 "We all live in a yellow submarine\n" +
@@ -47,11 +52,22 @@ public class Task1 {
         String lowerCaseLyrics = lyrics.toLowerCase();
         lowerCaseLyrics = lowerCaseLyrics.replaceAll(",", "").replaceAll(",", "").replaceAll("\n", " ");
         String[] arrayOfLyrics = lowerCaseLyrics.split(" ");
-        for (String lyric : arrayOfLyrics) {
-            System.out.println(lyric);
-        }
+//        for (String lyric : arrayOfLyrics) {
+//            System.out.println(lyric);
+//        }
 
         // Part 2:
+        List<String> lyricsAsList = Arrays.asList(arrayOfLyrics);
+        List<String> lyricsAsListsWithoutDuplicateWords = lyricsAsList.stream().distinct().toList();
+        Iterator<String> iterator = lyricsAsListsWithoutDuplicateWords.iterator();
+        if (iterator.hasNext()) {
+            do {
+                System.out.println(iterator.next());
+            } while (iterator.hasNext());
+        }
 
+        List<String> sortedLyrics = lyricsAsListsWithoutDuplicateWords.stream()
+                .sorted(Comparator.comparingInt(String::length))
+                .toList();
     }
 }
