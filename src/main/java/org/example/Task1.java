@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Iterator;
+//import java.util.Iterator;
 import java.util.List;
 
 public class Task1 {
@@ -58,16 +58,23 @@ public class Task1 {
 
         // Part 2:
         List<String> lyricsAsList = Arrays.asList(arrayOfLyrics);
-        List<String> lyricsAsListsWithoutDuplicateWords = lyricsAsList.stream().distinct().toList();
-        Iterator<String> iterator = lyricsAsListsWithoutDuplicateWords.iterator();
-        if (iterator.hasNext()) {
-            do {
-                System.out.println(iterator.next());
-            } while (iterator.hasNext());
-        }
+        List<String> lyricsAsListWithoutDuplicateWords = lyricsAsList.stream().distinct().toList();
+//        Iterator<String> iterator = lyricsAsListWithoutDuplicateWords.iterator();
+//        if (iterator.hasNext()) {
+//            do {
+//                System.out.println(iterator.next());
+//            } while (iterator.hasNext());
+//        }
 
-        List<String> sortedLyrics = lyricsAsListsWithoutDuplicateWords.stream()
+        List<String> sortedLyrics = lyricsAsListWithoutDuplicateWords.stream()
                 .sorted(Comparator.comparingInt(String::length))
                 .toList();
+
+        // Part 3:
+        List<String> filteredLyricsAsList = lyricsAsList.stream()
+                .filter(w -> (!w.equals("yellow") && !w.equals("submarine")))
+                .toList();
+
+        filteredLyricsAsList.forEach(System.out::println);
     }
 }
