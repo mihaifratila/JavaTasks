@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a3dac71-374b-49d4-885d-d3204c40374b" name="Changes" comment="Add solved Problems for the Second Task from Java Module 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1a3dac71-374b-49d4-885d-d3204c40374b" name="Changes" comment="Remove the solved Problems for the Third Task from Task2 File">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Task3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675067320622</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove the solved Problems for the Third Task from Task2 File">
+      <created>1675067953408</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675067953408</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -120,6 +127,7 @@
     <MESSAGE value="Add solved part 4 of First Task for Java Module 2" />
     <MESSAGE value="Add solved part 5 of First Task for Java Module 2" />
     <MESSAGE value="Add solved Problems for the Second Task from Java Module 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add solved Problems for the Second Task from Java Module 2" />
+    <MESSAGE value="Remove the solved Problems for the Third Task from Task2 File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove the solved Problems for the Third Task from Task2 File" />
   </component>
 </project>
